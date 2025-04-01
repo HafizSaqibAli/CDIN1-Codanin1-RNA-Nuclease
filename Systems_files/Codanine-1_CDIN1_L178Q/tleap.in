@@ -1,0 +1,12 @@
+source leaprc.protein.ff14SB
+source leaprc.water.tip3p
+
+mol = loadpdb CDIN1_CDAN1_L178Q.pdb
+
+solvateOct mol TIP3PBOX 10.0
+addions mol Na+ 0
+addions mol Cl- 0
+saveamberparm mol CDIN1_CDAN1_L178Q_solv.prmtop CDIN1_CDAN1_L178Q_solv.inpcrd
+savepdb mol CDIN1_CDAN1_L178Q_solv.pdb
+quit
+
