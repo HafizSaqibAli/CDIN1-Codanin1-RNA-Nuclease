@@ -1,0 +1,12 @@
+source leaprc.protein.ff14SB
+source leaprc.water.TIP3P
+
+mol = loadpdb AF-Q9Y2V0-F1-model_v4_Fixed.pdb
+
+solvateOct mol TIP3PBOX 10.0
+addions mol Na+ 0
+addions mol Cl- 0
+saveamberparm mol CDIN1_solv.prmtop CDIN1_solv.inpcrd
+savepdb mol CDIN1_solv.pdb
+quit
+
