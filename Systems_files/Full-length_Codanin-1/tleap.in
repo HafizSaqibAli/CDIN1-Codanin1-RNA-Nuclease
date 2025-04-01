@@ -1,0 +1,12 @@
+source leaprc.protein.ff14SB
+source leaprc.water.TIP3P
+
+mol = loadpdb Q8IWY9-F1-model_v4_Codanin-1_Fixed.pdb
+
+solvateOct mol TIP3PBOX 10.0
+addions mol Na+ 0
+addions mol Cl- 0
+saveamberparm mol FL_Codanin-1_solv.prmtop FL_Codanin-1_solv.inpcrd
+savepdb mol FL_Codanin-1_solv.pdb
+quit
+
