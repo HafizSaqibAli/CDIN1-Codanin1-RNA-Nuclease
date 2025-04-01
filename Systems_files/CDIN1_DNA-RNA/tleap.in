@@ -1,0 +1,14 @@
+source leaprc.RNA.OL3
+source leaprc.DNA.OL21
+source leaprc.protein.ff14SB
+source leaprc.water.tip3p
+
+sys = loadpdb CDIN1_DNA-RNA.pdb
+
+solvateOct sys TIP3PBOX 10.0 iso
+addions sys Na+ 0
+addions sys Cl- 0
+saveamberparm sys CDIN1_DNA-RNA_solv.prmtop CDIN1_DNA-RNA_solv.inpcrd
+savepdb sys CDIN1_DNA-RNA_solv.pdb
+quit
+
