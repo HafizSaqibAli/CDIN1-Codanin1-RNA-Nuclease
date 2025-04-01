@@ -1,0 +1,26 @@
+Equilibration: Langevin Thermostat and Protein Restraint, 200ps Heat (NVT)
+ &cntrl
+  imin = 0,		    ! run MD without any minimisation
+  ntx = 5,		    ! read coordinates and velocities
+  irest = 1,		    ! restart simulation
+  nscm = 1000,              ! default setting, remove translational CoM motion every 1000 steps
+  nstlim = 100000,          ! number of MD steps (100000 steps for 200 ps equilibration)	
+  dt = 0.002,		    ! timestep 2 fs, use with SHAKE
+  ntf = 2,     		    ! related to SHAKE, equals ntc 
+  ntc = 2,		    ! SHAKE on, bonds involving hydrogen are constrained
+  tempi = 300.0,	    ! Already heated to 300 K
+  temp0 = 300.0,	    ! Final Temperature (300 K)
+  ntpr = 1000,              ! print energy info to mdout and mdinfo every 1000 steps
+  ntwx = 1000,		    ! write coordinates every 1000 steps (2 ps for 2 fs step) 
+  cut = 10.0,		    ! Non bonded cutoff 10 Å
+  ioutfm = 1,      	    ! format of coord and velocity files, binary NetCDF trajectory (1 is the default)
+  ntb = 1,		    ! Periodic boundary conditions are employed, with constant volume 
+  ntp = 0,		    ! no pressure scaling
+  ntt = 3,		    ! Langevin thermostat
+  gamma_ln = 2.0,	    ! Ccollision frequency of 2.0 ps-1,
+  iwrap = 1,                ! the coordinates written to the restart and trajectory files
+  ig=-1,		    ! seed for pseudorandom number generator (-1 means new random seed for each run)
+  ntr = 1,                  ! restraints on
+  restraint_wt = 5.0,       ! weight for posres (kcal/mol/A^2)
+  restraintmask = ':1-282', ! restrain protein
+ /

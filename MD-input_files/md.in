@@ -1,0 +1,25 @@
+Production: MD with Langevin Thermostat and Berendsen Barostat, no restraints 100 ns (NPT)
+ &cntrl
+  imin = 0,		! run MD without any minimisation
+  irest = 1,		! restart the simulation,
+  ntx = 5,		! read coordinate and velocities from a NetCDF or ASCII coordinate file 
+  nscm = 1000,     	! default, remove translational CoM motion every 1000 steps
+  nstlim = 50000000,	! number of MD steps (500,000,00 steps for 100 ns simulation) 
+  dt = 0.002,		! timestep 2 fs, use with SHAKE
+  ntc = 2,		! SHAKE on, bonds involving hydrogen are constrained
+  ntf = 2,		! related to SHAKE, equals ntc
+  cut = 10.0,		! Non bonded cutoff 10 Å 
+  ntb = 2,		! Periodic boundary conditions are employed, with constant volume
+  ntp = 1,		! constant pressure on, with isotropic position scaling, defaults to Berendsen barostat
+  ntpr = 50000,		! print energy info to mdout and mdinfo every 5000 steps
+  ntwx = 50000,		! write coordinates every 5000 steps (10 ps for 2 fs step) 
+  ntt = 3,		! Langevin thermostat
+  gamma_ln = 2.0,	! collision frequency ps-1,
+  taup = 2.0,           ! time constant (ps)
+  barostat = 1,    	! Berendsen barostat
+  pres0 = 1.0,    	! reference pressure (1.0 bar) 
+  iwrap = 1,	 	! the coordinates written to the restart and trajectory files	
+  tempi = 300.0,	! Initial Temperature (K) 
+  temp0 = 300.0,	! Final Temperature (K)
+  ig = -1,		! Seed for pseudorandom number generator (-1 means new random seed for each run) 
+ /

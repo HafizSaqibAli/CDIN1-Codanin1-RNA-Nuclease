@@ -1,0 +1,22 @@
+Equilibration: Langevin Thermostat 1000 ps (1 ns) (NPT)
+ &cntrl
+  imin = 0,		! run MD without any minimisation
+  irest = 1,		! restart the simulation, reading coords and vels from a restart file
+  ntx = 5,		! read coordinate and velocities
+  nscm = 1000,     	! default, remove translational CoM motion every 1000 steps
+  nstlim = 500000,	! number of MD steps (500000 steps for 1 ns equilibration)
+  dt = 0.002,		! timestep 2 fs, use with SHAKE
+  ntc = 2,		! SHAKE on, bonds involving hydrogen are constrained
+  ntf = 2,		! related to SHAKE, equals ntc
+  cut = 10.0, 		! Non-bonded cutoff in Å
+  ntb = 2, 		! Periodic boundary conditions are employed, with constant volume 
+  ntp = 1,		! Constant pressure on, with isotropic position scaling, defaults to Berendsen barostat
+  taup = 2.0,		! Time constant (ps)
+  ntpr = 5000,		! print energy info to mdout and mdinfo every 1000 steps  
+  ntwx = 5000,		! write coordinates every 5000 steps (2 ps for 2 fs step) 
+  ntt = 3,		! Langevin thermostat
+  gamma_ln = 2.0,	! Ccollision frequency of 2.0 ps-1	
+  iwrap = 1,		! the coordinates written to the restart and trajectory files
+  tempi = 300.0,        ! Initial Temperature (K)	
+  temp0 = 300.0,	! Final Temperature (K)
+ /

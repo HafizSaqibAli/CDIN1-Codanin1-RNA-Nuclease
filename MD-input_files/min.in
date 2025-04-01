@@ -1,0 +1,13 @@
+Minimisation template, 1000 steps steepest descent, 9000 steps conjugate gradient
+ &cntrl
+  imin = 1,		    ! perform energy minimisation
+  maxcyc = 10000, 	    ! number of minimisation steps, extended from 1000 to 10000
+  ncyc = 1000, 		    ! number of steepest descent steps
+  ntmin = 1, 		    ! switch to conjugate gradient after ncyc steps
+  cut = 10.0,		    ! non-bonded cutoff (Angstroms)
+  ntpr = 10,		    ! frequency for writing mdout and mdinfo
+  ntwx = 100,               ! write coordinates every 100 steps (0.2 ps for 2 fs step)
+  ntr = 1, 		    ! restraints on
+  restraint_wt = 5.0,       ! weight for posres (kcal/mol/A^2)
+  restraintmask = ':1-282', ! restrain protein
+ /
