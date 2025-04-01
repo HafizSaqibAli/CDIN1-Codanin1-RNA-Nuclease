@@ -1,0 +1,12 @@
+source leaprc.protein.ff19SB
+source leaprc.water.OPC
+
+mol = loadpdb AF-Q9Y2V0-F1-model_v4_Fixed.pdb
+
+solvateOct mol OPCBOX 10.0
+addions mol Na+ 0
+addions mol Cl- 0
+saveamberparm mol CDIN1_solv.prmtop CDIN1_solv.inpcrd
+savepdb mol CDIN1_solv.pdb
+quit
+
