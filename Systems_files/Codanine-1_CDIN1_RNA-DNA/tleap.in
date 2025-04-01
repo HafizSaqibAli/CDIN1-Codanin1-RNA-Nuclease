@@ -1,0 +1,14 @@
+source leaprc.DNA.OL21
+source leaprc.RNA.OL3
+source leaprc.protein.ff14SB
+source leaprc.water.tip3p
+
+sys = loadpdb Codanine-1_CDIN1_RNA-DNA.pdb
+
+solvateOct sys TIP3PBOX 10.0
+addions sys Na+ 0
+addions sys Cl- 0
+saveamberparm sys Codanine-1_CDIN1_RNA-DNA_solv.prmtop Codanine-1_CDIN1_RNA-DNA_solv.inpcrd
+savepdb sys Codanine-1_CDIN1_RNA-DNA_solv.pdb
+quit
+
