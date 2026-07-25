@@ -82,7 +82,7 @@ Typical contents include:
 
 ---
 
-### MD-input_files/**
+### **MD-input_files/**
 Contains the AMBER input (`.in`) files used during molecular dynamics simulations.
 
 Typical stages include:
