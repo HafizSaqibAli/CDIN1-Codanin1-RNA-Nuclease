@@ -15,7 +15,7 @@ url = {https://www.nature.com/articles/s41467-026-74766-7},
 
 
 ```
-# Repository Structure
+## Repository Structure
 ```
 
 CDIN1-Codanin1-RNA-Nuclease/
@@ -57,7 +57,8 @@ CDIN1-Codanin1-RNA-Nuclease/
     └── Mg_CDIN1_wild/
     
 
-## Directory Overview
+```## Directory Overview
+```
 
 ### **Experimental_data/**
 Contains all experimental datasets used for biochemical characterization and validation of the computational studies.
@@ -93,11 +94,11 @@ Typical stages include:
 - Restart simulations
 
 ---
-
-### **Systems_files/**
+```
+## **Systems_files/**
 Contains all prepared molecular systems used in this study.
 
-Available systems include:
+Available systems include:```
 
 - **2Mg-CDIN1_DNA-RNA/** – CDIN1–RNA/DNA complex with two catalytic Mg²⁺ ions.
 - **C-terminal_Codanin-1/** – Isolated C-terminal domain of Codanin-1.
