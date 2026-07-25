@@ -15,8 +15,8 @@ url = {https://www.nature.com/articles/s41467-026-74766-7},
 
 
 
-# **Repository Structure**
-```
+# Repository Structure
+
 CDIN1-Codanin1-RNA-Nuclease/
 ├── Experimental_data/
 │   ├── FP Data/
@@ -54,7 +54,7 @@ CDIN1-Codanin1-RNA-Nuclease/
     ├── Mg-CDIN1_DNA-RNA/
     ├── Mg_CDIN1_mutatnt/
     └── Mg_CDIN1_wild/
-```
+
 
 ## Directory Overview
 
