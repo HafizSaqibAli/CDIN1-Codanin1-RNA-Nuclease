@@ -11,7 +11,7 @@ year = {2026},
 issn = {2041-1723},
 doi = {https://doi.org/10.1038/s41467-026-74766-7},
 url = {https://www.nature.com/articles/s41467-026-74766-7},
-}```
+}
 
 
 
